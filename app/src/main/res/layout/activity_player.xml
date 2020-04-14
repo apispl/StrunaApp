@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Player"
+    app:umanoDragView="@id/dragview"
+    app:umanoScrollableView="@id/listView"
+    android:layout_gravity="bottom"
+    android:gravity="bottom"
+    android:background="@drawable/player_back">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/songImage"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="250dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <ImageView
+            android:id="@+id/playBtt"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="100dp"
+            android:src="@drawable/ic_play_arrow_black_24dp" />
+
+        <ImageView
+            android:id="@+id/stopBtt"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="125dp"
+            android:src="@drawable/ic_stop_black_24dp" />
+
+        <ImageView
+            android:id="@+id/pauseBtt"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="125dp"
+            android:layout_toStartOf="@+id/playBtt"
+            android:src="@drawable/ic_pause_black_24dp" />
+
+        <ImageView
+            android:id="@+id/setLooping"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="-224dp"
+            android:layout_marginBottom="258dp"
+            android:layout_toStartOf="@+id/playBtt"
+            android:src="@drawable/ic_repeat_one_black_24dp" />
+
+        <ImageView
+            android:id="@+id/volumeUp"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="340dp"
+            android:layout_marginBottom="410dp"
+            android:src="@drawable/ic_volume_up_black_24dp"></ImageView>
+
+        <ImageView
+            android:id="@+id/volumeDown"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="340dp"
+            android:layout_marginBottom="290dp"
+            android:src="@drawable/ic_volume_down_black_24dp"></ImageView>
+
+        <SeekBar
+            android:id="@+id/volumeSeekBar"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="260dp"
+            android:layout_marginBottom="350dp"
+            android:rotation="-90" />
+
+        <!--        <Button-->
+<!--            android:id="@+id/pause"-->
+<!--            style="@style/Widget.AppCompat.Button.Borderless"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_marginBottom="140dp"-->
+<!--            android:layout_marginStart="50dp"-->
+<!--            android:text="PAUSE"-->
+<!--            android:onClick="pause"-->
+<!--            />-->
+
+<!--        <Button-->
+<!--            android:id="@+id/play"-->
+<!--            style="@style/Widget.AppCompat.Button.Borderless"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_marginBottom="140dp"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:onClick="play"-->
+<!--            android:text="PLAY"-->
+
+<!--            />-->
+
+        <SeekBar
+            android:id="@+id/progressSeekBar"
+            android:layout_width="398dp"
+            android:layout_height="12dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="221dp" />
+
+<!--        <Button-->
+<!--            android:id="@+id/stop"-->
+<!--            style="@style/Widget.AppCompat.Button.Borderless"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_marginBottom="140dp"-->
+<!--            android:layout_marginEnd="50dp"-->
+<!--            android:text="STOP"-->
+<!--            android:onClick="stop"-->
+<!--            />-->
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/dragview"
+        android:clickable="true"
+        android:focusable="false"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="68dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:paddingLeft="10dp"
+                android:text=""
+                android:textSize="24dp"/>
+
+        </RelativeLayout>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/listView">
+
+        </ListView>
+
+    </LinearLayout>
+
+</com.sothree.slidinguppanel.SlidingUpPanelLayout>
